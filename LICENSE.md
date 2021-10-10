@@ -34,7 +34,8 @@ under the zlib license, which can be viewed at https://libsdl.org/license.php.
 ## Assets/Image.bmp and Assets/Untitled.xfc
 
 I have no idea where this image came from.  I found it in `~/Pictures/` with no
-context.  I'm not comfortable releasing this under an open license.
+context.  I'm not comfortable releasing this under an open license, because I
+don't think I have the rights to.
 
 ## Assets/Thumbnail.png
 

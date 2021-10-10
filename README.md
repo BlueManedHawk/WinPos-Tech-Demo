@@ -32,6 +32,6 @@ Licensing details are in `LICENSE.md`.
 
 To compile the program, make sure you have whatever your distro's SDL
 development package is installed, then just compile `Main.c` with `clang-13
-\`sdl2-config --cflags --libs\` Main.c`, and you should be good.  (You'll need
+´sdl2-config --cflags --libs\´ Main.c`, and you should be good.  (You'll need
 to run the file from the root directory of the repository—if you're getting an
 error about the image failing to load, that's why.)
