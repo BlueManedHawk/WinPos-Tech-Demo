@@ -79,7 +79,7 @@ int main ( void ) {
 		SDL_LogError ( SDL_LOG_CATEGORY_ERROR , "Couldn't black out\
 			the surface.  Uh, it's probably fine?  😬.  Error\
 			given:  %s", SDL_GetError ( ) ) ; }
-	SDL_Surface * Image = SDL_LoadBMP ( "../Assets/Image.bmp" ) ;
+	SDL_Surface * Image = SDL_LoadBMP ( "./Assets/Image.bmp" ) ;
 	if ( Image == NULL ) {
 		SDL_LogCritical ( SDL_LOG_CATEGORY_ERROR , "Couldn't create\
 			the image surface.  Error given:  %s" , SDL_GetError (\
@@ -89,7 +89,7 @@ int main ( void ) {
 		SDL_QuitSubSystem ( SDL_INIT_VIDEO ) ;
 		SDL_Quit ( ) ;
 		return EXIT_FAILURE ; }
-	if ( SDL_BlitScaled ( Image , NULL , Surface , &ImageRect ) < 0 ) {
+	if ( SDL_BlitSurface ( Image , NULL , Surface , &ImageRect ) < 0 ) {
 		SDL_LogCritical ( SDL_LOG_CATEGORY_ERROR , "Couldn't blit the\
 			surfaces, making effects unobservable.  Error given:\
 			  %s" , SDL_GetError ( ) ) ;
@@ -114,7 +114,7 @@ int main ( void ) {
 		return EXIT_FAILURE ; }
 
 	SDL_Texture * Texture = SDL_CreateTextureFromSurface ( Renderer , \
-		Image ) ;
+		Surface ) ;
 	if ( Texture == NULL ) {
 		SDL_LogCritical ( SDL_LOG_CATEGORY_ERROR , "Couldn't get the\
 			texture to work.  Error given:  %s" , SDL_GetError ( )\
